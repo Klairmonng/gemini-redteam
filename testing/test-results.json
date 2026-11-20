@@ -1,6 +1,6 @@
 {
- "run_at": "2026-11-19T17:58:21",
- "python": "3.15.0",
+ "run_at": "2026-11-20T16:51:05",
+ "python": "3.13.7",
  "rows": [
   {
    "id": "TC-BIN-01",
@@ -160,7 +160,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.012
   },
   {
    "id": "TC-SEQ-01",
@@ -208,7 +208,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.017
+   "seconds": 0.058
   },
   {
    "id": "TC-SORT-02",
@@ -224,7 +224,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.016
+   "seconds": 0.056
   },
   {
    "id": "TC-SORT-03",
@@ -272,7 +272,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.01
+   "seconds": 0.032
   },
   {
    "id": "TC-SORT-06",
@@ -288,7 +288,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.005
+   "seconds": 0.016
   },
   {
    "id": "TC-SORT-07",
@@ -304,7 +304,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.002
   },
   {
    "id": "TC-SORT-08",
@@ -320,7 +320,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.204
+   "seconds": 0.645
   },
   {
    "id": "TC-SORT-09",
@@ -336,7 +336,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.008
   },
   {
    "id": "TC-DS-01",
@@ -352,7 +352,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.005
+   "seconds": 0.006
   },
   {
    "id": "TC-DS-02",
@@ -384,7 +384,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.004
   },
   {
    "id": "TC-DS-04",
@@ -400,7 +400,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.006
+   "seconds": 0.011
   },
   {
    "id": "TC-DS-05",
@@ -416,7 +416,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.004
   },
   {
    "id": "TC-DS-06",
@@ -432,7 +432,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.004
   },
   {
    "id": "TC-DS-07",
@@ -448,7 +448,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.004
   },
   {
    "id": "TC-DS-08",
@@ -464,7 +464,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.005
   },
   {
    "id": "TC-DS-09",
@@ -480,7 +480,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.035
+   "seconds": 0.097
   },
   {
    "id": "TC-LAB-01",
@@ -497,7 +497,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.004
   },
   {
    "id": "TC-LAB-02",
@@ -514,7 +514,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.004
   },
   {
    "id": "TC-LAB-03",
@@ -531,7 +531,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.009
+   "seconds": 0.02
   },
   {
    "id": "TC-LAB-04",
@@ -548,7 +548,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.004
+   "seconds": 0.006
   },
   {
    "id": "TC-LAB-05",
@@ -565,7 +565,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.004
   },
   {
    "id": "TC-LAB-06",
@@ -582,7 +582,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.005
   },
   {
    "id": "TC-DET-01",
@@ -599,7 +599,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.0
+   "seconds": 0.001
   },
   {
    "id": "TC-DET-02",
@@ -711,7 +711,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.002
   },
   {
    "id": "TC-DET-09",
@@ -903,7 +903,7 @@
    "issue": "ISS-07",
    "outcome": "known",
    "detail": "3 not less than 3",
-   "seconds": 0.015
+   "seconds": 0.001
   },
   {
    "id": "TC-DET-21",
@@ -920,7 +920,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.0
+   "seconds": 0.001
   },
   {
    "id": "TC-DET-22",
@@ -936,7 +936,7 @@
    "issue": "ISS-01, ISS-04",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.002
   },
   {
    "id": "TC-DET-23",
@@ -953,7 +953,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.0
+   "seconds": 0.001
   },
   {
    "id": "TC-DET-24",
@@ -969,7 +969,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.0
+   "seconds": 0.001
   },
   {
    "id": "TC-JDG-01",
@@ -1214,7 +1214,7 @@
    "issue": "ISS-08",
    "outcome": "known",
    "detail": "Extra data: line 2 column 1 (char 83)",
-   "seconds": 0.002
+   "seconds": 0.003
   },
   {
    "id": "TC-JDG-16",
@@ -1278,7 +1278,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 2.142
+   "seconds": 5.857
   },
   {
    "id": "TC-PERF-03",
@@ -1294,7 +1294,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 1.946
+   "seconds": 1.702
   },
   {
    "id": "TC-PERF-04",
@@ -1310,7 +1310,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.022
+   "seconds": 0.043
   },
   {
    "id": "TC-SRV-01",
@@ -1327,7 +1327,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.0
+   "seconds": 0.001
   },
   {
    "id": "TC-SRV-02",
@@ -1344,7 +1344,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.003
+   "seconds": 0.013
   },
   {
    "id": "TC-SRV-03",
@@ -1361,7 +1361,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.005
   },
   {
    "id": "TC-SRV-04",
@@ -1378,7 +1378,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.008
   },
   {
    "id": "TC-SRV-05",
@@ -1395,7 +1395,7 @@
    "issue": "ISS-10",
    "outcome": "known",
    "detail": "ValueError not raised",
-   "seconds": 0.001
+   "seconds": 0.002
   },
   {
    "id": "TC-SRV-06",
@@ -1412,7 +1412,7 @@
    "issue": "ISS-10",
    "outcome": "known",
    "detail": "ValueError not raised",
-   "seconds": 0.035
+   "seconds": 0.149
   },
   {
    "id": "TC-SRV-07",
@@ -1428,7 +1428,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.079
+   "seconds": 0.196
   },
   {
    "id": "TC-SRV-08",
@@ -1444,7 +1444,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.02
+   "seconds": 0.048
   },
   {
    "id": "TC-SRV-09",
@@ -1460,7 +1460,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.031
   },
   {
    "id": "TC-SRV-10",
@@ -1476,7 +1476,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.016
   },
   {
    "id": "TC-SRV-11",
@@ -1492,7 +1492,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.042
+   "seconds": 0.165
   },
   {
    "id": "TC-SRV-12",
@@ -1508,7 +1508,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.057
   },
   {
    "id": "TC-SRV-13",
@@ -1524,7 +1524,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.004
   },
   {
    "id": "TC-SRV-14",
@@ -1540,7 +1540,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.004
   },
   {
    "id": "TC-SRV-15",
@@ -1556,7 +1556,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.002
+   "seconds": 0.037
   },
   {
    "id": "TC-SRV-16",
@@ -1572,7 +1572,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.001
+   "seconds": 0.016
   },
   {
    "id": "TC-SRV-17",
@@ -1588,7 +1588,7 @@
    "issue": "ISS-09",
    "outcome": "known",
    "detail": "Remote end closed connection without response",
-   "seconds": 0.002
+   "seconds": 0.022
   },
   {
    "id": "TC-BST-01",
@@ -1828,7 +1828,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.005
+   "seconds": 0.024
   },
   {
    "id": "TC-BST-16",
@@ -1892,7 +1892,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.004
+   "seconds": 0.014
   },
   {
    "id": "TC-BST-20",
@@ -1908,7 +1908,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.019
+   "seconds": 0.08
   },
   {
    "id": "TC-DLL-01",
@@ -2292,7 +2292,7 @@
    "issue": "",
    "outcome": "pass",
    "detail": "",
-   "seconds": 0.048
+   "seconds": 0.148
   },
   {
    "id": "TC-IF-01",

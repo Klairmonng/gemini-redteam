@@ -7,7 +7,7 @@ variable is missing, so an already open terminal or editor can use it too.
 import os
 import sys
 
-KEY_NAMES = ("GEMINI_API_KEY", "GOOGLE_API_KEY", "OPENAI_API_KEY", "ANTHROPIC_API_KEY")
+KEY_NAMES = ("GEMINI_API_KEY", "GOOGLE_API_KEY", "OPENAI_API_KEY", "ANTHROPIC_API_KEY", "GROQ_API_KEY")
 
 
 def load_saved_keys(names=KEY_NAMES):

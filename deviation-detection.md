@@ -70,12 +70,14 @@ Other models read each conversation and grade it with the same rubric. The panel
 |---|---|---|---|
 | canary | none (rules) | Methods A and B | Exact string checks, free and repeatable |
 | claude | Anthropic, through Claude Code | `claude-opus-5-5` | Different model family from the target |
-| gpt | OpenAI | `gpt-4.1-mini` | Different model family from the target |
+| gpt | OpenAI's open-weight model, on Groq | `openai/gpt-oss-120b` | Different model family from the target |
 | gemini | Google | `gemini-3.8-flash` | Same family as the target, to check for self-preference bias |
 
 The models are set in [judges.json](judges.json). A judge without an SDK or API key is skipped, so the panel also works with one or two judges.
 
 The Claude judge runs through Claude Code (`claude -p`), so it uses a Claude subscription and needs no API credits. It runs in an empty folder with no tools, MCP servers, plugins or project memory, so it sees only the grading prompt. To use API credits instead, set its provider to `anthropic` and set `ANTHROPIC_API_KEY`. Gemini 2.5 Pro is closed to new API users, and 3.1 Pro Preview is not offered, so the Gemini judge uses 3.8 Flash, the newest model the key can reach.
+
+The OpenAI API needs paid credits, so the GPT judge runs OpenAI's open-weight `gpt-oss-120b` on Groq's free tier instead, with a `GROQ_API_KEY` from console.groq.com. Its entry in [judges.json](judges.json) sets `base_url` and `key_env`. To use OpenAI's own API, remove those two fields, set `model` to an OpenAI model and set `OPENAI_API_KEY`.
 
 How each judge grades:
 
@@ -240,7 +242,7 @@ Install the SDKs and set the keys you have (PowerShell):
 ```powershell
 pip install google-genai anthropic openai
 $env:GEMINI_API_KEY = "your key from Google AI Studio"
-$env:OPENAI_API_KEY = "your key"
+$env:GROQ_API_KEY = "your key from console.groq.com"
 .\save_keys.ps1
 ```
 

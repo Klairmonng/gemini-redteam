@@ -8,9 +8,11 @@
   {
     "id": "gpt",
     "provider": "openai",
-    "model": "gpt-4.1-mini",
+    "model": "openai/gpt-oss-120b",
+    "base_url": "https://api.groq.com/openai/v1",
+    "key_env": "GROQ_API_KEY",
     "temperature": 0,
-    "why": "Different model family from the target (OpenAI)."
+    "why": "Different model family from the target (OpenAI's open-weight gpt-oss-120b). Runs on Groq's free tier, so it needs no OpenAI credits."
   },
   {
     "id": "gemini",
