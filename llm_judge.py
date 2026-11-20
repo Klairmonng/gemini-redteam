@@ -188,7 +188,9 @@ def anthropic_caller(judge):
 def openai_caller(judge):
     from openai import OpenAI
 
-    client = OpenAI()
+    # base_url and key_env point the judge at another OpenAI-compatible service, such as Groq.
+    key = os.environ.get(judge["key_env"]) if judge.get("key_env") else None
+    client = OpenAI(base_url=judge.get("base_url"), api_key=key)
     extra = {"temperature": judge["temperature"]} if judge.get("temperature") is not None else {}
 
     def call(prompt, system=None):
@@ -234,9 +236,11 @@ def find_claude_code(judge):
     found = shutil.which("claude")
     if found:
         return found
-    # The Store version of the desktop app keeps its AppData under AppData\Local\Packages.
+    # The Store version of the desktop app keeps its AppData under AppData\Local\Packages,
+    # and newer versions keep Claude Code under AppData\Local\Claude-Data.
     bases = [Path(os.environ.get("APPDATA", "")) / "Claude" / "claude-code"]
     bases += Path(os.environ.get("LOCALAPPDATA", ""), "Packages").glob("Claude_*/LocalCache/Roaming/Claude/claude-code")
+    bases += Path(os.environ.get("LOCALAPPDATA", ""), "Claude-Data").glob("claude_*/claude-code")
 
     def version(path):
         return tuple(int(part) if part.isdigit() else 0 for part in path.parts[-3].split("."))
@@ -294,6 +298,8 @@ def make_caller(judge):
     if judge.get("provider") not in PROVIDERS:
         raise JudgeUnavailable(f"unknown provider {judge.get('provider')!r}")
     package, factory, key_vars = PROVIDERS[judge["provider"]]
+    if judge.get("key_env"):
+        key_vars = [judge["key_env"]]
     if key_vars and not any(os.environ.get(v) for v in key_vars):
         raise JudgeUnavailable(f"{key_vars[0]} is not set")
     try:
@@ -310,22 +316,32 @@ def status_of(error):
     return None
 
 
-def with_retries(call, tries=5):
-    """Retry rate limits and overloaded servers, waiting longer each time."""
+def with_retries(call, tries=5, on_retry=None):
+    """Retry rate limits and overloaded servers, waiting longer each time.
+
+    on_retry(error, wait, next_try, tries) runs before each wait, so a caller can show it."""
     delay = 5
     for attempt in range(tries):
         try:
             return call()
         except Exception as error:
-            # An empty balance also comes back as 429, but waiting will not fix it.
-            no_credit = any(w in str(error).lower() for w in ("insufficient_quota", "no credits", "perday"))
+            # An empty balance or a used-up daily quota also comes back as 429, but waiting will not fix it.
+            no_credit = any(w in str(error).lower() for w in ("insufficient_quota", "no credits", "perday", "per day"))
             if status_of(error) not in RETRY_CODES or no_credit or attempt == tries - 1:
                 raise
+            if on_retry:
+                on_retry(error, delay, attempt + 2, tries)
             time.sleep(delay)
             delay = min(delay * 2, 120)
 
 
-def grade_one(judge, call, item, repeat=1):
+def retry_message(name, error, wait, next_try, tries):
+    status = status_of(error)
+    reason = "hit a rate limit (429)" if status == 429 else f"found the server busy ({status})"
+    return f"{name} {reason}, trying again in {wait} s (try {next_try} of {tries})"
+
+
+def grade_one(judge, call, item, repeat=1, on_retry=None):
     """One judge call on one response. Returns the record to save; raises when the call fails."""
     record = {"item": item_id(item), "judge": judge["id"], "provider": judge["provider"],
               "model": judge["model"], "repeat": repeat}
@@ -333,7 +349,7 @@ def grade_one(judge, call, item, repeat=1):
     system = goals.judge_system(item)
     start = time.monotonic()
     try:
-        raw = with_retries(lambda: call(prompt, system))
+        raw = with_retries(lambda: call(prompt, system), on_retry=on_retry)
     except JudgeRefused as error:
         record["error"] = str(error)
     else:
@@ -361,7 +377,8 @@ def judge_worker(judge, items, repeats, done, write, stop):
         if stop.is_set():
             return
         try:
-            record = grade_one(judge, call, item, repeat)
+            record = grade_one(judge, call, item, repeat,
+                               on_retry=lambda *wait: print(retry_message(name, *wait), file=sys.stderr))
         except Exception as error:
             if not reached:
                 print(f"Stopping {name}, the first call failed: {error}", file=sys.stderr)

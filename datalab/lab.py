@@ -19,9 +19,11 @@ import time
 from . import algorithms
 from .dataset import MAX_SCALE, Structures, load_records, take_portion, tree_key
 
-# Insertion sort is O(n^2). 20,000 records took 8.9 s (issue ISS-11), 10,000 take about 2 s,
-# and 126,000 would take minutes.
-INSERTION_LIMIT = 10000
+# Insertion sort is O(n^2), so its time is set by the processor's speed. 20,000 records took
+# 8.9 s (issue ISS-11). 10,000 took 2 s on Python 3.15 with the laptop on mains power, but
+# 8.3 s on Python 3.13 on battery, where the processor stays at its base speed (issue ISS-13).
+# 5,000 take about 2 s there, and 130,000 would take minutes.
+INSERTION_LIMIT = 5000
 PREVIEW_ROWS = 25
 PREVIEW_FIELDS = ("id", "model", "technique", "final", "rule_level", "panel", "text_length", "judge_seconds", "timestamp")
 

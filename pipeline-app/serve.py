@@ -21,8 +21,10 @@ import argparse
 import json
 import re
 import secrets
+import socket
 import sys
 import threading
+import time
 import traceback
 import webbrowser
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -52,6 +54,8 @@ LIVE_JUDGMENTS = ROOT / "judgments_generated.jsonl"
 DEFAULT_ATTACKER = "claude_code:claude-opus-5-5"
 MODEL_ID = re.compile(r"^gemini-[a-z0-9][a-z0-9.\-]{0,60}$")
 MAX_BODY = 4096
+LINGER_SECONDS = 2.0  # after an answer, how long to keep reading what the client still sends
+LINGER_BYTES = 64 * 1024  # and how much of it at most
 
 
 def short(error, limit=220):
@@ -149,7 +153,8 @@ def run_job(lab, job, req):
             for row in rows:
                 log(f"{judge['id']} judge ({judge['model']}) is grading run {row['run']}")
                 try:
-                    record = llm_judge.grade_one(judge, call, row)
+                    record = llm_judge.grade_one(
+                        judge, call, row, on_retry=lambda *wait: log(llm_judge.retry_message(f"{judge['id']} judge", *wait)))
                 except Exception as error:
                     log(f"{judge['id']} judge skipped: {short(error)}")
                     break
@@ -181,6 +186,37 @@ def make_handler(lab, port):
 
         def log_message(self, fmt, *args):  # keep the terminal quiet
             pass
+
+        def finish(self):
+            super().finish()
+            self.linger()
+
+        def linger(self):
+            """Lingering close (RFC 9112, section 9.6), issue ISS-12.
+
+            Refusals (403, 404, 413, 415) answer without reading the request body. Closing a
+            socket that still has unread bytes makes Windows send a reset instead of a normal
+            close, and the reset can throw away the answer before the client reads it, so the
+            client sees WinError 10053 instead of the refusal. So after the answer: stop sending,
+            then read and discard what is left until the client closes, for a short time at most.
+            Nothing read here is used, and it happens after the answer is already sent.
+            """
+            sock = self.connection
+            try:
+                sock.shutdown(socket.SHUT_WR)
+                deadline = time.monotonic() + LINGER_SECONDS
+                left = LINGER_BYTES
+                while left > 0:
+                    wait = deadline - time.monotonic()
+                    if wait <= 0:
+                        break
+                    sock.settimeout(wait)
+                    chunk = sock.recv(min(left, 65536))
+                    if not chunk:  # the client has closed its side
+                        break
+                    left -= len(chunk)
+            except OSError:  # timeout, or the client is gone already
+                pass
 
         def send_json(self, status, data):
             body = json.dumps(data, ensure_ascii=False).encode("utf-8")

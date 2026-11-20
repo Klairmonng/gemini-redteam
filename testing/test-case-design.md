@@ -2,10 +2,11 @@
 
 | Item | Value |
 |---|---|
-| Version | 1.1 |
-| Date | 2026-11-19 |
+| Version | 1.2 |
+| Date | 2026-11-20 |
 | Author | [Your name] |
 | Test basis | [Requirements](requirements.md), [acceptance test plan](acceptance-test-plan.md) chapter 6 |
+| Change in 1.2 | MT-02 changed for the insertion sort limit of 5,000 (issue ISS-13) |
 
 ## 1. How to read this document
 
@@ -254,14 +255,14 @@ Table 14: Performance test cases. Limits are in the requirement; measured times 
 
 ## 8. Manual test scripts for the page
 
-Start the page with `start-canary-lab.bat` (or `python pipeline-app/serve.py`) and open the Data section, unless the script says otherwise. Executed on 2026-11-19 in the browser pane of the Claude desktop app.
+Start the page with `start-canary-lab.bat` (or `python pipeline-app/serve.py`) and open the Data section, unless the script says otherwise. Executed on 2026-11-19 in the browser pane of the Claude desktop app. MT-02 was changed on 2026-11-20 for the new insertion sort limit (ISS-13) and has not been run again yet.
 
 Table 15: Manual test scripts and their results.
 
 | Id | Requirement | Steps | Expected | Actual | Result |
 |---|---|---|---|---|---|
 | MT-01 | R-APP-3 | Copies × 100, Build. Quick sort by final level, highest first. Sequential search for `azure` in the answer text. Binary search final level `3`. Tree range `200-400`. Hash map search for the suggested id. | Every step shows a time like `0.0 s` with one decimal, the exact milliseconds next to it, and a green check line | All four times had one decimal; all checks green; 6,300 records, 300, 600, 2,000 and 1 found | Pass |
-| MT-02 | R-APP-4 | Copies × 100 (6,300 records), pick insertion sort, sort by answer length. Then copies × 1,000 (63,000) and pick insertion sort. | Runs at 6,300 with a green check. At 63,000 the Sort button is disabled and the note says to build fewer | 0.8 s, green check. At 63,000: button disabled, note "limited to 10,000 records ... 63,000 are loaded" | Pass |
+| MT-02 | R-APP-4 | Copies × 10 (under 1,000 records), pick insertion sort, sort by answer length. Then copies × 100 (over 5,000) and pick insertion sort. | Runs at × 10 with a green check. At × 100 the Sort button is disabled and the note says insertion sort is limited to 5,000 records and to build fewer | Not run yet with the 5,000 limit. On 2026-11-19, with the 10,000 limit: 0.8 s at 6,300 with a green check; at 63,000 the button was disabled, note "limited to 10,000 records ... 63,000 are loaded" | To run again |
 | MT-03 | R-APP-3 | Sequential search for `zzzz-nothing` | 0 found, "No records matched", check still green | As expected | Pass |
 | MT-04 | R-APP-3, R-SRV-3 | Tree range search for `400-200` | An error message under the panels; the page keeps working | "Search stopped: write a length like 300 or a range like 200-400, low first"; later searches worked | Pass |
 | MT-05 | R-APP-5 | Set the window to 375 px wide (phone) and open the Data section | No sideways scrolling | Page width 375 px at a 375 px window | Pass |

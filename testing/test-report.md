@@ -3,8 +3,8 @@
 | Item | Value |
 |---|---|
 | Report id | TR-CANARY-01 |
-| Version | 1.1 |
-| Date | 2026-11-19 |
+| Version | 1.2 |
+| Date | 2026-11-20 |
 | Author | [Your name] |
 | Test plan | [ATP-CANARY-01](acceptance-test-plan.md) version 1.1 |
 
@@ -14,10 +14,11 @@ Table 1: Versions of this report.
 |---|---|
 | 1.0 | First run: 140 test cases, 127 pass, 13 known issues; the rule check was not accepted |
 | 1.1 | Retest after fixing ISS-01 to ISS-06, with 4 new test cases; every part is accepted |
+| 1.2 | Two tests failed on the laptop on 2026-11-20: ISS-12 (server, intermittent) and ISS-13 (insertion sort time on battery). Both fixed and retested; MT-02 must be run again for the new insertion sort limit |
 
 ## 1. Summary
 
-Canary Lab was tested against 26 requirements with 144 automated test cases and 7 manual test scripts, built with seven test design techniques. 139 automated tests pass. 5 fail on purpose: they describe what a requirement asks for and are tied to the 4 issues that are still open, all with the lowest priority (P3). Seven issues were found, fixed and retested. All 7 manual scripts pass.
+Canary Lab was tested against 26 requirements with 144 automated test cases and 7 manual test scripts, built with seven test design techniques. 139 automated tests pass. 5 fail on purpose: they describe what a requirement asks for and are tied to the 4 issues that are still open, all with the lowest priority (P3). Nine issues were found, fixed and retested (ISS-12 and ISS-13 on 2026-11-20). Six of the 7 manual scripts pass; MT-02 must be run again because the insertion sort limit changed.
 
 Table 2: Verdict per part of the system.
 
@@ -25,14 +26,14 @@ Table 2: Verdict per part of the system.
 |---|---|---|
 | Rule check (R-DET) | Accepted | ISS-01 to ISS-06 fixed and retested; one open P3 issue (ISS-07) |
 | Judge panel logic (R-JDG) | Accepted | All rules pass; one open P3 issue (ISS-08) |
-| Data structures and algorithms (R-DS, R-ALG, R-APP) | Accepted | All tests pass; one performance issue fixed (ISS-11) |
-| Local server (R-SRV) | Accepted | Every security test passes; two open P3 issues (ISS-09, ISS-10) |
+| Data structures and algorithms (R-DS, R-ALG, R-APP) | Accepted once MT-02 passes again | All tests pass; two performance issues fixed (ISS-11, ISS-13) |
+| Local server (R-SRV) | Accepted | Every security test passes; ISS-12 fixed; two open P3 issues (ISS-09, ISS-10) |
 
 Advice: the results can be used in the Applied AI report and new data can be collected. Rescoring every recorded answer with the fixed rules changed no level (section 5). The P3 issues can wait.
 
 ## 2. What was tested
 
-The test items, test levels and environment are in the test plan, chapters 2, 6 and 11. In short: Python 3.15.0 on the student's Windows 10 laptop, the standard library only, no internet and no API keys. The manual scripts ran in the browser pane of the Claude desktop app.
+The test items, test levels and environment are in the test plan, chapters 2, 6 and 11. In short: Python 3.15.0 on the student's Windows 10 laptop, the standard library only, no internet and no API keys. The manual scripts ran in the browser pane of the Claude desktop app. The retest on 2026-11-20 (runs 10 to 12) used Python 3.13.7, the version installed now, with the laptop on battery.
 
 Table 3: What was run, in order.
 
@@ -47,6 +48,9 @@ Table 3: What was run, in order.
 | 7 | Page rules against the Python rules on 21 inputs, and the hand label check on the page | Detector section of the page | 2026-11-19 |
 | 8 | Rescore of every recorded answer against the baseline, and the hand labels | Script, and `python deviation_detector.py score sample_responses.jsonl` | 2026-11-19 |
 | 9 | Repeatability (AC-4): the full suite twice in a row | `python testing/run_tests.py`, twice | 2026-11-19 |
+| 10 | Server tests 12 times in a row (ISS-12: 4 runs failed), insertion sort timed on battery and on mains power (ISS-13) | `python -m unittest tests.test_server`, timing scripts | 2026-11-20 |
+| 11 | Retest after fixing ISS-12 and ISS-13: server tests 30 times in a row, the full suite 5 times in a row | `python -m unittest discover -s tests -t .` | 2026-11-20 |
+| 12 | All automated tests | `python testing/run_tests.py` | 2026-11-20 |
 
 Nothing in the plan was skipped. Two deviations from the plan:
 
@@ -124,7 +128,7 @@ Table 7: Manual test scripts (steps and details in [test case design](test-case-
 | Id | What | Result |
 |---|---|---|
 | MT-01 | Build, sort and four searches, times with one decimal and green checks | Pass |
-| MT-02 | Insertion sort allowed at 6,300 records, refused at 63,000 | Pass |
+| MT-02 | Insertion sort allowed at copies × 10, refused at × 100 (limit 5,000) | To run again (ISS-13); passed on 2026-11-19 with the 10,000 limit |
 | MT-03 | Search with no matches | Pass |
 | MT-04 | Invalid range gives a message, page keeps working | Pass |
 | MT-05 | Phone width, no sideways scrolling | Pass |
@@ -135,16 +139,18 @@ After the rule fixes the page's detector section was checked again (run 7): on 2
 
 ### 3.3 Measured times
 
-Table 8: Times with the largest portion (TC-PERF-01 to TC-PERF-04), last run. 64 answers × 2,000 copies = 128,000 records. Limit 5 s.
+Table 8: Times with the largest portion (TC-PERF-01 to TC-PERF-04), last run (run 12: Python 3.13.7, laptop on battery). 66 answers × 2,000 copies = 132,000 records. Limit 5 s. The run of 2026-11-19 (Python 3.15.0, 128,000 records) is in the second column.
 
-| Step | Time |
-|---|---|
-| Build all three structures | 1.21 s |
-| Quick sort by level, length, id | 0.34 s, 0.33 s, 0.39 s |
-| Merge sort by level, length, id | 0.39 s, 0.39 s, 0.60 s |
-| Insertion sort, 10,000 records | 2.14 s |
-| Hash map lookup | under 0.01 s |
-| Tree range, lengths 200 to 400 | 0.02 s |
+| Step | Time | 2026-11-19 |
+|---|---|---|
+| Build all three structures | 2.79 s | 1.21 s |
+| Quick sort by level, length, id | 0.85 s, 0.84 s, 0.95 s | 0.34 s, 0.33 s, 0.39 s |
+| Merge sort by level, length, id | 0.93 s, 0.99 s, 1.25 s | 0.39 s, 0.39 s, 0.60 s |
+| Insertion sort at its limit | 1.68 s (5,000 records) | 2.14 s (10,000 records) |
+| Hash map lookup | under 0.01 s | under 0.01 s |
+| Tree range, lengths 200 to 400 | 0.04 s | 0.02 s |
+
+On battery the processor does not boost (ISS-13), so the times are about twice those on mains power. The build now has the least room: 2.7 to 3.4 s on battery in run 11.
 
 ## 4. Findings
 
@@ -159,6 +165,8 @@ Table 9: Findings, highest priority first. Details, causes, fixes and retests ar
 | ISS-04 | Spaced hex was missed | TC-DET-06 | Minor | P2 | Fixed, retested |
 | ISS-05 | Digits as words gave level 2, not 3; the check for it existed but was never called | TC-DET-07 | Minor | P2 | Fixed, retested |
 | ISS-11 | Insertion sort at its limit took 8.9 s | TC-PERF-03 | Minor | P2 | Fixed, retested |
+| ISS-12 | Refusals with a request body sometimes arrived as a dropped connection (WinError 10053): the server closed with the body unread, and Windows then resets the connection | TC-SRV-08, TC-SRV-09, TC-SRV-10, TC-SRV-12 | Minor | P2 | Fixed, retested |
+| ISS-13 | Insertion sort at its limit took 8.3 s with the laptop on battery, where the processor stays at its base speed | TC-PERF-03 | Minor | P2 | Fixed, retested; MT-02 to run again |
 | ISS-07 | NATO words are found inside longer words | TC-DET-20 | Minor | P3 | Open |
 | ISS-08 | A brace after the judge's JSON loses the grade | TC-JDG-15 | Minor | P3 | Open |
 | ISS-09 | A non-numeric Content-Length drops the connection | TC-SRV-17 | Cosmetic | P3 | Open |
@@ -194,18 +202,18 @@ The one answer in table 10 is OB-01 in the issue register: a leak through counti
 
 Table 12: Acceptance criteria from the test plan, chapter 7.
 
-| Id | Criterion | Version 1.0 | Version 1.1 | Evidence |
-|---|---|---|---|---|
-| AC-1 | Every requirement has at least one test case | Met | Met | Table 5 and [test case design](test-case-design.md) table 16 |
-| AC-2 | Every test case for a risk class A requirement passes, or its issue is P3 | Not met | Met | R-DET-1, R-DET-2, R-DET-3, R-DET-4 and R-DET-6 (risks PR-01 and PR-03) all pass |
-| AC-3 | No open P1 issue | Not met | Met | ISS-01 fixed |
-| AC-4 | One command, offline, same result twice | Met | Met | Run 9 in table 3 |
-| AC-5 | R-PERF-1 is met | Met | Met | Table 8 |
-| AC-6 | Manual tests pass | Met | Met | Table 7 |
+| Id | Criterion | Version 1.0 | Version 1.1 | Version 1.2 | Evidence |
+|---|---|---|---|---|---|
+| AC-1 | Every requirement has at least one test case | Met | Met | Met | Table 5 and [test case design](test-case-design.md) table 16 |
+| AC-2 | Every test case for a risk class A requirement passes, or its issue is P3 | Not met | Met | Met | R-DET-1, R-DET-2, R-DET-3, R-DET-4 and R-DET-6 (risks PR-01 and PR-03) all pass |
+| AC-3 | No open P1 issue | Not met | Met | Met | ISS-01 fixed |
+| AC-4 | One command, offline, same result twice | Met | Met | Met | Runs 9 and 11 in table 3 (ISS-12 had broken it) |
+| AC-5 | R-PERF-1 is met | Met | Met | Met | Table 8, on battery |
+| AC-6 | Manual tests pass | Met | Met | Not yet | Table 7: MT-02 to run again |
 
 ## 7. Conclusion and advice
 
-All six acceptance criteria are met, so Canary Lab is accepted. The data structures and algorithms can be shown in the Algorithmic Programming interview as they are, and the study's numbers can be used in the Applied AI report.
+In version 1.1 all six acceptance criteria were met, so Canary Lab was accepted. Since version 1.2, AC-6 waits for MT-02 to be run again with the new insertion sort limit; the other five are met. The data structures and algorithms can be shown in the Algorithmic Programming interview, and the study's numbers can be used in the Applied AI report (ISS-12 and ISS-13 do not change any score).
 
 Table 13: Next steps.
 
@@ -215,6 +223,7 @@ Table 13: Next steps.
 | 2 | Put the project in Git and run `python testing/run_tests.py` in GitHub Actions on every change (plan 11.2) | S1 | P2 |
 | 3 | Fix ISS-07 to ISS-10, remove their expectedFailure markers and run the tests again | S1 | P3 |
 | 4 | Run `python testing/run_tests.py` again on the day of hand-in, so the results file matches the handed-in code | Student | Before hand-in |
+| 5 | Run MT-02 again with the 5,000 limit and update table 7 and AC-6 | Student | Before hand-in |
 
 ## References
 
@@ -222,7 +231,7 @@ Table 13: Next steps.
 |---|---|
 | [1] | [Acceptance test plan](acceptance-test-plan.md), ATP-CANARY-01 version 1.1 |
 | [2] | [Requirements](requirements.md) version 1.1 |
-| [3] | [Test case design](test-case-design.md) version 1.1 |
-| [4] | [Issue register](issue-register.md) version 1.1 |
-| [5] | [Test results](test-results.md), written by `testing/run_tests.py` on 2026-11-19 |
+| [3] | [Test case design](test-case-design.md) version 1.2 |
+| [4] | [Issue register](issue-register.md) version 1.2 |
+| [5] | [Test results](test-results.md), written by `testing/run_tests.py` on 2026-11-20 |
 | [6] | NHL Stenden, Module book OIT Testing, version 7.2, 2021, appendix 7.1 (scoring rubrics) |

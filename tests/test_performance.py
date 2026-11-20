@@ -50,7 +50,7 @@ class TestTimeBehaviour(unittest.TestCase):
     def test_TC_PERF_03_insertion_sort_at_its_limit(self):
         array = self.structures.linked.to_array()[:INSERTION_LIMIT]
         _, seconds = self.timed(f"insertion sort of {len(array):,}", lambda: algorithms.insertion_sort(array, key=lambda r: r["text_length"]))
-        self.assertLess(seconds, LIMIT_SECONDS)  # failed at the old limit of 20,000 (8.9 s), see ISS-11
+        self.assertLess(seconds, LIMIT_SECONDS)  # failed at 20,000 (8.9 s, ISS-11) and at 10,000 on battery (8.3 s, ISS-13)
 
     def test_TC_PERF_04_lookups_are_fast(self):
         some_id = self.portion[len(self.portion) // 2]["id"]
