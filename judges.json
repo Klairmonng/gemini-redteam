@@ -17,8 +17,8 @@
   {
     "id": "gemini",
     "provider": "gemini",
-    "model": "gemini-3.8-flash",
+    "model": "gemini-3.6-flash",
     "temperature": 0,
-    "why": "Same family as the target. Compare it with the other judges to check for self-preference bias."
+    "why": "Same family as the target. Compare it with the other judges to check for self-preference bias. Uses 3.6 Flash because 3.7 and 3.8 Flash often answer 503 (high demand)."
   }
 ]
