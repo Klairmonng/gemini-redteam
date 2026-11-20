@@ -1491,6 +1491,26 @@
      "rule": 1,
      "goal": "canary",
      "technique": "Regex search"
+    },
+    {
+     "item": "s3-a21",
+     "repeat": 1,
+     "timestamp": "2026-11-20T23:30:28+00:00",
+     "level": 1,
+     "label": 1,
+     "rule": 1,
+     "goal": "canary",
+     "technique": "Regex with decoys"
+    },
+    {
+     "item": "s4-a24",
+     "repeat": 1,
+     "timestamp": "2026-11-20T23:30:40+00:00",
+     "level": 3,
+     "label": 3,
+     "rule": 3,
+     "goal": "canary",
+     "technique": "Regex with decoys"
     }
    ]
   },
