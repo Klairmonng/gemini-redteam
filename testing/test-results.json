@@ -1,0 +1,2330 @@
+{
+ "run_at": "2026-11-19T17:58:21",
+ "python": "3.15.0",
+ "rows": [
+  {
+   "id": "TC-BIN-01",
+   "title": "target before first",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-02",
+   "title": "target on first",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-03",
+   "title": "run of equal values",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-04",
+   "title": "target on last",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-05",
+   "title": "target after last",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-06",
+   "title": "target in a gap",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-07",
+   "title": "empty and single arrays",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-08",
+   "title": "range includes both ends",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-09",
+   "title": "records by key",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BIN-10",
+   "title": "agrees with sequential search",
+   "file": "test_algorithms.py",
+   "class": "TestBinarySearch",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-SEQ-01",
+   "title": "result classes",
+   "file": "test_algorithms.py",
+   "class": "TestSequentialSearch",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-SEQ-02",
+   "title": "on the linked list keeps list order",
+   "file": "test_algorithms.py",
+   "class": "TestSequentialSearch",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-SORT-01",
+   "title": "every class ascending",
+   "file": "test_algorithms.py",
+   "class": "TestSortCorrectness",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.017
+  },
+  {
+   "id": "TC-SORT-02",
+   "title": "every class descending",
+   "file": "test_algorithms.py",
+   "class": "TestSortCorrectness",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.016
+  },
+  {
+   "id": "TC-SORT-03",
+   "title": "input is not changed",
+   "file": "test_algorithms.py",
+   "class": "TestSortCorrectness",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-SORT-04",
+   "title": "key function on records",
+   "file": "test_algorithms.py",
+   "class": "TestSortCorrectness",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-SORT-05",
+   "title": "random cross check",
+   "file": "test_algorithms.py",
+   "class": "TestSortCorrectness",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.01
+  },
+  {
+   "id": "TC-SORT-06",
+   "title": "stable sorts keep order of equal keys",
+   "file": "test_algorithms.py",
+   "class": "TestSortStability",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.005
+  },
+  {
+   "id": "TC-SORT-07",
+   "title": "quick sort keys are right",
+   "file": "test_algorithms.py",
+   "class": "TestSortStability",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-ALG-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SORT-08",
+   "title": "quick sort on large sorted and reversed input",
+   "file": "test_algorithms.py",
+   "class": "TestSortScale",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.204
+  },
+  {
+   "id": "TC-SORT-09",
+   "title": "merge sort on size not a power of two",
+   "file": "test_algorithms.py",
+   "class": "TestSortScale",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-ALG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-DS-01",
+   "title": "J1 answer with grades",
+   "file": "test_dataset_lab.py",
+   "class": "TestJoin",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-APP-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.005
+  },
+  {
+   "id": "TC-DS-02",
+   "title": "J2 answer without grades",
+   "file": "test_dataset_lab.py",
+   "class": "TestJoin",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-APP-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-DS-03",
+   "title": "missing files are skipped",
+   "file": "test_dataset_lab.py",
+   "class": "TestJoin",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-APP-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-DS-04",
+   "title": "scale edges",
+   "file": "test_dataset_lab.py",
+   "class": "TestPortion",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.006
+  },
+  {
+   "id": "TC-DS-05",
+   "title": "limit edges",
+   "file": "test_dataset_lab.py",
+   "class": "TestPortion",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-DS-06",
+   "title": "model filter",
+   "file": "test_dataset_lab.py",
+   "class": "TestPortion",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-DS-07",
+   "title": "scaled copies have unique ids and fixed order",
+   "file": "test_dataset_lab.py",
+   "class": "TestPortion",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-DS-08",
+   "title": "structures hold every record",
+   "file": "test_dataset_lab.py",
+   "class": "TestPortion",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-DS-09",
+   "title": "real files load with unique ids",
+   "file": "test_dataset_lab.py",
+   "class": "TestProjectData",
+   "techniques": [
+    "Checklist"
+   ],
+   "requirements": [
+    "R-APP-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.035
+  },
+  {
+   "id": "TC-LAB-01",
+   "title": "steps must start with build",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-LAB-02",
+   "title": "invalid requests",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-LAB-03",
+   "title": "every sort passes its check",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.009
+  },
+  {
+   "id": "TC-LAB-04",
+   "title": "every search passes its check",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.004
+  },
+  {
+   "id": "TC-LAB-05",
+   "title": "tree range text",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-LAB-06",
+   "title": "insertion sort limit edges",
+   "file": "test_dataset_lab.py",
+   "class": "TestLabRequests",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-DET-01",
+   "title": "documented forms score 3",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-1",
+    "R-DET-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-02",
+   "title": "base64 of other spellings",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "ISS-01",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-03",
+   "title": "base64 inside a longer text",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "ISS-01",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-04",
+   "title": "other separators",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-1"
+   ],
+   "issue": "ISS-02",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-05",
+   "title": "reversed without the dash",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "ISS-03",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-06",
+   "title": "hex with spaces",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "ISS-04",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-07",
+   "title": "letters plain and digits as words",
+   "file": "test_detector.py",
+   "class": "TestFullLeakForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "ISS-05",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-08",
+   "title": "one answer per level class",
+   "file": "test_detector.py",
+   "class": "TestLevels",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-DET-09",
+   "title": "empty answer",
+   "file": "test_detector.py",
+   "class": "TestLevels",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-10",
+   "title": "on and below the part boundary",
+   "file": "test_detector.py",
+   "class": "TestFragmentBoundaries",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DET-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-11",
+   "title": "one character short of the full code",
+   "file": "test_detector.py",
+   "class": "TestFragmentBoundaries",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DET-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-12",
+   "title": "part typed by the attacker",
+   "file": "test_detector.py",
+   "class": "TestAttackerText",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-13",
+   "title": "part only the model wrote",
+   "file": "test_detector.py",
+   "class": "TestAttackerText",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-14",
+   "title": "attacker text from earlier turns counts",
+   "file": "test_detector.py",
+   "class": "TestAttackerText",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-15",
+   "title": "each channel alone",
+   "file": "test_detector.py",
+   "class": "TestChannels",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-6"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-16",
+   "title": "highest channel wins",
+   "file": "test_detector.py",
+   "class": "TestChannels",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-6"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-17",
+   "title": "nothing anywhere",
+   "file": "test_detector.py",
+   "class": "TestChannels",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-6"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-18",
+   "title": "microsoft azure",
+   "file": "test_detector.py",
+   "class": "TestFalseAlarms",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DET-5"
+   ],
+   "issue": "ISS-06",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-19",
+   "title": "number that contains 7741",
+   "file": "test_detector.py",
+   "class": "TestFalseAlarms",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DET-5"
+   ],
+   "issue": "ISS-06",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-20",
+   "title": "nato words inside other words",
+   "file": "test_detector.py",
+   "class": "TestFalseAlarms",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DET-5"
+   ],
+   "issue": "ISS-07",
+   "outcome": "known",
+   "detail": "3 not less than 3",
+   "seconds": 0.015
+  },
+  {
+   "id": "TC-DET-21",
+   "title": "new forms score 3",
+   "file": "test_detector.py",
+   "class": "TestWiderForms",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DET-1",
+    "R-DET-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-22",
+   "title": "harmless text survives decoding",
+   "file": "test_detector.py",
+   "class": "TestFalseAlarms",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DET-5"
+   ],
+   "issue": "ISS-01, ISS-04",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-DET-23",
+   "title": "part edges",
+   "file": "test_detector.py",
+   "class": "TestWholeWordParts",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DET-3",
+    "R-DET-5"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DET-24",
+   "title": "gap before the digit words",
+   "file": "test_detector.py",
+   "class": "TestWholeWordParts",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DET-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-01",
+   "title": "counts around the even odd boundary",
+   "file": "test_judging.py",
+   "class": "TestUpperMedian",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-02",
+   "title": "order does not matter",
+   "file": "test_judging.py",
+   "class": "TestUpperMedian",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-03",
+   "title": "full decision table",
+   "file": "test_judging.py",
+   "class": "TestCombine",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-04",
+   "title": "hint gives way to judges",
+   "file": "test_judging.py",
+   "class": "TestCombine",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-05",
+   "title": "D1 agreement",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-06",
+   "title": "D2 judges differ",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-07",
+   "title": "D3 canary only",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-08",
+   "title": "D4 judges only",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-09",
+   "title": "D5 two reasons",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-10",
+   "title": "D6 one judge and no judges",
+   "file": "test_judging.py",
+   "class": "TestDisputes",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-JDG-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-11",
+   "title": "valid replies",
+   "file": "test_judging.py",
+   "class": "TestParseVerdict",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-12",
+   "title": "invalid levels are refused",
+   "file": "test_judging.py",
+   "class": "TestParseVerdict",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-13",
+   "title": "unknown channel becomes none",
+   "file": "test_judging.py",
+   "class": "TestParseVerdict",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-14",
+   "title": "evidence length boundary",
+   "file": "test_judging.py",
+   "class": "TestParseVerdict",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-15",
+   "title": "braces after the object",
+   "file": "test_judging.py",
+   "class": "TestParseVerdict",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-JDG-4"
+   ],
+   "issue": "ISS-08",
+   "outcome": "known",
+   "detail": "Extra data: line 2 column 1 (char 83)",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-JDG-16",
+   "title": "weighted kappa",
+   "file": "test_judging.py",
+   "class": "TestAgreement",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-JDG-5"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-JDG-17",
+   "title": "kappa words bands",
+   "file": "test_judging.py",
+   "class": "TestAgreement",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-JDG-5"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-PERF-01",
+   "title": "build all three structures",
+   "file": "test_performance.py",
+   "class": "TestTimeBehaviour",
+   "techniques": [
+    "Performance test"
+   ],
+   "requirements": [
+    "R-PERF-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-PERF-02",
+   "title": "quick and merge sort",
+   "file": "test_performance.py",
+   "class": "TestTimeBehaviour",
+   "techniques": [
+    "Performance test"
+   ],
+   "requirements": [
+    "R-PERF-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 2.142
+  },
+  {
+   "id": "TC-PERF-03",
+   "title": "insertion sort at its limit",
+   "file": "test_performance.py",
+   "class": "TestTimeBehaviour",
+   "techniques": [
+    "Performance test"
+   ],
+   "requirements": [
+    "R-PERF-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 1.946
+  },
+  {
+   "id": "TC-PERF-04",
+   "title": "lookups are fast",
+   "file": "test_performance.py",
+   "class": "TestTimeBehaviour",
+   "techniques": [
+    "Performance test"
+   ],
+   "requirements": [
+    "R-PERF-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.022
+  },
+  {
+   "id": "TC-SRV-01",
+   "title": "valid request",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-SRV-02",
+   "title": "runs and turns boundaries",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.003
+  },
+  {
+   "id": "TC-SRV-03",
+   "title": "scenario count boundaries",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-04",
+   "title": "model and goal classes",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-SRV-05",
+   "title": "true is not a number",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "ISS-10",
+   "outcome": "known",
+   "detail": "ValueError not raised",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-06",
+   "title": "true is not a scale",
+   "file": "test_server.py",
+   "class": "TestValidateRequest",
+   "techniques": [
+    "Equivalence partitioning",
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-APP-2"
+   ],
+   "issue": "ISS-10",
+   "outcome": "known",
+   "detail": "ValueError not raised",
+   "seconds": 0.035
+  },
+  {
+   "id": "TC-SRV-07",
+   "title": "page loads for the right host",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.079
+  },
+  {
+   "id": "TC-SRV-08",
+   "title": "other host names are refused",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.02
+  },
+  {
+   "id": "TC-SRV-09",
+   "title": "api needs the token",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-SRV-10",
+   "title": "other websites are refused",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-11",
+   "title": "right token and origin are served",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.042
+  },
+  {
+   "id": "TC-SRV-12",
+   "title": "wrong type and size",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-SRV-13",
+   "title": "size boundary",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-SRV-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-14",
+   "title": "bad run requests start nothing",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-15",
+   "title": "unknown paths",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-SRV-16",
+   "title": "bad datalab request gives 400",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.001
+  },
+  {
+   "id": "TC-SRV-17",
+   "title": "length that is not a number",
+   "file": "test_server.py",
+   "class": "TestHttp",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-SRV-3"
+   ],
+   "issue": "ISS-09",
+   "outcome": "known",
+   "detail": "Remote end closed connection without response",
+   "seconds": 0.002
+  },
+  {
+   "id": "TC-BST-01",
+   "title": "R1 leaf root",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-02",
+   "title": "R2 leaf",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-03",
+   "title": "R3 root with left only",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-04",
+   "title": "R4 inner with left only",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-05",
+   "title": "R5 root with right only",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-06",
+   "title": "R6 inner with right only",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-07",
+   "title": "R7 root with two children",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-08",
+   "title": "R8 successor is right child",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-09",
+   "title": "R9 successor deeper",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-10",
+   "title": "missing key",
+   "file": "test_structures.py",
+   "class": "TestTreeRemove",
+   "techniques": [
+    "Decision table"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-11",
+   "title": "empty tree",
+   "file": "test_structures.py",
+   "class": "TestTreeBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-12",
+   "title": "put replaces equal key",
+   "file": "test_structures.py",
+   "class": "TestTreeBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-13",
+   "title": "min max and sorted walk",
+   "file": "test_structures.py",
+   "class": "TestTreeBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-14",
+   "title": "tuple keys like the dataset",
+   "file": "test_structures.py",
+   "class": "TestTreeBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-15",
+   "title": "random operations against a dict",
+   "file": "test_structures.py",
+   "class": "TestTreeBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.005
+  },
+  {
+   "id": "TC-BST-16",
+   "title": "low is included high is excluded",
+   "file": "test_structures.py",
+   "class": "TestTreeRange",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-17",
+   "title": "values next to the edges",
+   "file": "test_structures.py",
+   "class": "TestTreeRange",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-18",
+   "title": "whole tree and empty ranges",
+   "file": "test_structures.py",
+   "class": "TestTreeRange",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-BST-19",
+   "title": "sorted input makes a chain",
+   "file": "test_structures.py",
+   "class": "TestTreeShape",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.004
+  },
+  {
+   "id": "TC-BST-20",
+   "title": "random input stays low",
+   "file": "test_structures.py",
+   "class": "TestTreeShape",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DS-4"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.019
+  },
+  {
+   "id": "TC-DLL-01",
+   "title": "empty state",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-02",
+   "title": "empty to one and back from the front",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-03",
+   "title": "empty to one and back from the back",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-04",
+   "title": "one to many keeps order",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-05",
+   "title": "many to one to empty",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-06",
+   "title": "remove if head middle tail",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-07",
+   "title": "remove if everything goes to empty",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-08",
+   "title": "to array",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListStates",
+   "techniques": [
+    "State transition"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-09",
+   "title": "valid edges and middle",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListIndex",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-10",
+   "title": "invalid edges",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListIndex",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-DLL-11",
+   "title": "empty list has no valid index",
+   "file": "test_structures.py",
+   "class": "TestDoublyLinkedListIndex",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-2"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-01",
+   "title": "put get for each key type",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-02",
+   "title": "lookalike keys of different types stay apart",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-03",
+   "title": "existing key is replaced not added",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-04",
+   "title": "missing key",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-05",
+   "title": "remove existing key",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-06",
+   "title": "hash is deterministic",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-07",
+   "title": "bad capacity is refused",
+   "file": "test_structures.py",
+   "class": "TestHashMapBehaviour",
+   "techniques": [
+    "Equivalence partitioning"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-08",
+   "title": "all keys found in one chain",
+   "file": "test_structures.py",
+   "class": "TestHashMapCollisions",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-09",
+   "title": "remove from chain head middle end",
+   "file": "test_structures.py",
+   "class": "TestHashMapCollisions",
+   "techniques": [
+    "Error guessing"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-10",
+   "title": "twelve entries fit",
+   "file": "test_structures.py",
+   "class": "TestHashMapResize",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-11",
+   "title": "thirteenth entry doubles capacity",
+   "file": "test_structures.py",
+   "class": "TestHashMapResize",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-12",
+   "title": "replacing at the limit does not resize",
+   "file": "test_structures.py",
+   "class": "TestHashMapResize",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-HM-13",
+   "title": "many resizes against a dict",
+   "file": "test_structures.py",
+   "class": "TestHashMapResize",
+   "techniques": [
+    "Boundary value analysis"
+   ],
+   "requirements": [
+    "R-DS-3"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.048
+  },
+  {
+   "id": "TC-IF-01",
+   "title": "structures implement interfaces",
+   "file": "test_structures.py",
+   "class": "TestInterfaces",
+   "techniques": [
+    "Checklist"
+   ],
+   "requirements": [
+    "R-DS-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  },
+  {
+   "id": "TC-IF-02",
+   "title": "incomplete structure is refused",
+   "file": "test_structures.py",
+   "class": "TestInterfaces",
+   "techniques": [
+    "Checklist"
+   ],
+   "requirements": [
+    "R-DS-1"
+   ],
+   "issue": "",
+   "outcome": "pass",
+   "detail": "",
+   "seconds": 0.0
+  }
+ ]
+}
